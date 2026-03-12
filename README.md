@@ -130,6 +130,15 @@ http://127.0.0.1:8000/status
 http://127.0.0.1:8000/metrics
 **Experiment Results**
 http://127.0.0.1:8000/experiment_results
+**Submit a Task**
+Example request:
+```
+POST /submit_task
+{
+  "task_id": 1,
+  "duration": 30
+}
+```
 
 ## Project Structure
 ```
@@ -151,3 +160,13 @@ distributed_scheduler/
 │
 └── README.md
 ```
+
+## Future Improvements
+
+Possible extensions:
+
+- Task replication for higher reliability
+- Persistent state storage
+- Distributed logging
+- Dynamic worker scaling
+- Advanced scheduling policies
