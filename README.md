@@ -4,7 +4,7 @@ A lightweight distributed task scheduling system that balances workloads across 
 
 ---
 
-## 🚀 Features
+## Features
 
 - Distributed task scheduling architecture
 - Two scheduling strategies:
@@ -114,3 +114,39 @@ Performance graphs were generated to visualize:
 
 - Average completion time
 - Recovery latency across different task durations
+
+## Running the System
+**Start the scheduler**
+uvicorn scheduler:app --port 8000
+**Start the worker1**
+uvicorn worker:app --port 8001
+**Start the worker2**
+uvicorn worker2:app --port 8002
+**Interactive API Documentation**
+http://127.0.0.1:8000/docs
+**Scheduler Status**
+http://127.0.0.1:8000/status
+**Runtime Metrics**
+http://127.0.0.1:8000/metrics
+**Experiment Results**
+http://127.0.0.1:8000/experiment_results
+
+## Project Structure
+
+distributed_scheduler/
+│
+├── scheduler.py
+├── worker.py
+├── worker2.py
+│
+├── experiments/
+│   └── fault_tolerance/
+│       └── phase1_results.json
+│
+├── plots/
+│   └── fault_tolerance_graphs/
+│       ├── generate_phase1_graphs.py
+│       ├── phase1_avg_completion.png
+│       └── phase1_recovery_latency.png
+│
+└── README.md
