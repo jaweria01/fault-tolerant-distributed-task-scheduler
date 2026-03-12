@@ -132,7 +132,7 @@ http://127.0.0.1:8000/metrics
 http://127.0.0.1:8000/experiment_results
 
 ## Project Structure
-
+```
 distributed_scheduler/
 │
 ├── scheduler.py
@@ -150,3 +150,4 @@ distributed_scheduler/
 │       └── phase1_recovery_latency.png
 │
 └── README.md
+```
